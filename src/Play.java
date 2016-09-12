@@ -68,7 +68,7 @@ public class Play extends BasicGameState{
 
 		for(Planet p : planets){
             int i = 0;
-            while(i <= p.c.size()){
+            while(i < p.c.size()){
                 g.draw(p.c.get(i));
                 g.fill(p.c.get(i),p.Pfill.get(i));
                 i++;

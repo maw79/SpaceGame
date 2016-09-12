@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="windows">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
