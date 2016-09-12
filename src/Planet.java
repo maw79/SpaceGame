@@ -27,10 +27,14 @@ public class Planet {
         LocX = LocXin;
         LocY = LocYin;
         int i = 0;
-        while(i <= Radius){
-            colors.add(new Color(R+i,G+i,B+i));
-            c.add(new Circle(LocX, LocY, Radius-i));
-            Pfill.add(new GradientFill(0,0,colors.get(i),10,10,colors.get(i)));
+        int j = 0;
+        while(i < Radius){
+            if(i%10 == 0){
+                colors.add(new Color(R+i,G+i,B+i));
+                c.add(new Circle(LocX, LocY, Radius-i));
+                Pfill.add(new GradientFill(0,0,colors.get(j),10,10,colors.get(j)));
+                j++;
+            }
             i++;
         }
         cir = new Circle(LocX,LocY,Radius);

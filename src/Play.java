@@ -32,7 +32,7 @@ public class Play extends BasicGameState{
 //		players.add(new AIShip(10, 10, players, 0 , 700, (byte) 1, false, shots));
 //		players.add(new AIShip(10, 10, players, 700 , 700, (byte) 1, false, shots));
 
-        planets.add(new Planet(100,10,10,10,200,200));
+        planets.add(new Planet(1000,10,10,10,2000,2000));
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
@@ -44,6 +44,14 @@ public class Play extends BasicGameState{
 
 		g.translate(-s.bBox.getCenterX() + gc.getWidth()/2, -s.bBox.getCenterY() + gc.getHeight()*3/4);
 		g.rotate(s.X(), s.Y(), -s.rotAngle());
+
+		for(Planet p : planets){
+			int i = 0;
+			while(i < p.Pfill.size()){
+				g.fill(p.c.get(i),p.Pfill.get(i));
+				i++;
+			}
+		}
 
 		for(Shot s : shots){
 			g.setColor(new Color((float)1.0, (float)1.0, (float)1.0, s.fade));
@@ -65,18 +73,6 @@ public class Play extends BasicGameState{
 			g.rotate(ship.X(), ship.Y(), -ship.rotAngle());
 
 		}
-
-		for(Planet p : planets){
-            int i = 0;
-            while(i < p.c.size()){
-                g.draw(p.c.get(i));
-                g.fill(p.c.get(i),p.Pfill.get(i));
-                i++;
-            }
-            //g.draw(p.c);
-            //g.fill(p.c, p.Pfill);
-        }
-
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
