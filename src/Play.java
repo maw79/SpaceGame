@@ -1,4 +1,9 @@
-//import java.util.ArrayList;
+///////////////////////////////////////////////////////////////////////////////////
+//Play.java
+//Type: Rendering File
+//Author: Aaron Riggs
+//Date: 9/10/15
+///////////////////////////////////////////////////////////////////////////////////
 
 import java.util.ArrayList;
 import org.lwjgl.input.Mouse;
@@ -24,22 +29,22 @@ public class Play extends BasicGameState{
 
 	public void init(GameContainer gc, StateBasedGame sbg)
 			throws SlickException {
-		shipPic = new Image("/res/DefaultShip.png");
+		shipPic = new Image("/res/Ship.png");
 		s = new Ship(2, 10, players, 0, 0, (byte) 0, true, shots);
 		players.clear();
 		players.add(s);
-//		players.add(new AIShip(10, 10, players, 700, 0, (byte) 1, false, shots));
-//		players.add(new AIShip(10, 10, players, 0 , 700, (byte) 1, false, shots));
-//		players.add(new AIShip(10, 10, players, 700 , 700, (byte) 1, false, shots));
+		players.add(new AIShip(10, 10, players, 700, 0, (byte) 1, false, shots));
+		players.add(new AIShip(10, 10, players, 0 , 700, (byte) 1, false, shots));
+		players.add(new AIShip(10, 10, players, 700 , 700, (byte) 1, false, shots));
 
-        planets.add(new Planet(1000,10,10,10,2000,2000));
+        planets.add(new Planet(1000,Color.blue,Color.green,2000,2000));
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
 			throws SlickException {
 		players.size();
 		g.rotate(116, 66, s.rotAngle());
-		g.drawImage(shipPic, 100, 50);
+		//g.drawImage(shipPic, 100, 50);
 		g.rotate(116, 66, -s.rotAngle());
 
 		g.translate(-s.bBox.getCenterX() + gc.getWidth()/2, -s.bBox.getCenterY() + gc.getHeight()*3/4);
