@@ -2,14 +2,13 @@
 //Planet.java
 //Type: Planet object
 //Author: Aaron Riggs
-//Date: 9/10/15
+//Date: 9/10/16
 ///////////////////////////////////////////////////////////////////////////////////
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.ShapeFill;
 import org.newdawn.slick.fills.GradientFill;
 import org.newdawn.slick.geom.*;
-import org.newdawn.slick.svg.RadialGradientFill;
 
 import java.util.ArrayList;
 

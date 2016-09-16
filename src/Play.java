@@ -2,7 +2,7 @@
 //Play.java
 //Type: Rendering File
 //Author: Aaron Riggs
-//Date: 9/10/15
+//Date: 9/10/16
 ///////////////////////////////////////////////////////////////////////////////////
 
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ public class Play extends BasicGameState{
 	int id = 0;
 	ArrayList<Ship> players = new ArrayList<Ship>();
 	ArrayList<Shot> shots = new ArrayList<Shot>();
-    ArrayList<Planet> planets = new ArrayList<Planet>();
 	Ship s;
 	Image shipPic;
+	SolarSystem solar;
 
 	public Play(int state) {
 		id = state;
@@ -37,7 +37,7 @@ public class Play extends BasicGameState{
 		players.add(new AIShip(10, 10, players, 0 , 700, (byte) 1, false, shots));
 		players.add(new AIShip(10, 10, players, 700 , 700, (byte) 1, false, shots));
 
-        planets.add(new Planet(1000,Color.blue,Color.green,2000,2000));
+		solar = new SolarSystem(0);
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
@@ -50,21 +50,12 @@ public class Play extends BasicGameState{
 		g.translate(-s.bBox.getCenterX() + gc.getWidth()/2, -s.bBox.getCenterY() + gc.getHeight()*3/4);
 		g.rotate(s.X(), s.Y(), -s.rotAngle());
 
-		for(Planet p : planets){
-			int i = 0;
-			while(i < p.Pfill.size()){
-				g.fill(p.c.get(i),p.Pfill.get(i));
-				i++;
-			}
-		}
-
 		for(Shot s : shots){
 			g.setColor(new Color((float)1.0, (float)1.0, (float)1.0, s.fade));
 			g.draw(s.shot);
 		}
-		
-		g.setColor(Color.white);
-		g.drawRect(0, 0, gc.getWidth(), gc.getWidth());
+
+		DrawPlanet(solar.sun,g);
 
 		for(Ship ship : players){
 			
@@ -126,6 +117,14 @@ public class Play extends BasicGameState{
 			s.w.shoot();
 		}
 
+	}
+
+	public void DrawPlanet(Planet p,Graphics g){
+		int i = 0;
+		while(i < p.Pfill.size()){
+			g.fill(p.c.get(i),p.Pfill.get(i));
+			i++;
+		}
 	}
 	
 	public void clearShots(){
