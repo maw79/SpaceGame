@@ -1,17 +1,16 @@
 <component name="libraryTable">
   <library name="windows">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/slick.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lwjgl.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/slick" />
+    </CLASSES>
     <JAVADOC />
     <NATIVE>
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
-      <root url="file://$USER_HOME$/Desktop/SpaceShipGame/SpaceShipGame/lib/natives/windows" />
+      <root url="file://$USER_HOME$/Downloads/lwjgl-2.9.3/lwjgl-2.9.3/native/windows" />
+      <root url="file://$USER_HOME$/Downloads/slick" />
     </NATIVE>
     <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Downloads/slick" recursive="false" />
   </library>
 </component>

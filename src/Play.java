@@ -37,7 +37,7 @@ public class Play extends BasicGameState{
 		players.add(new AIShip(10, 10, players, 0 , 700, (byte) 1, false, shots));
 		players.add(new AIShip(10, 10, players, 700 , 700, (byte) 1, false, shots));
 
-		solar = new SolarSystem(0);
+		solar = new SolarSystem(1);
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
@@ -56,6 +56,10 @@ public class Play extends BasicGameState{
 		}
 
 		DrawPlanet(solar.sun,g);
+		int i = 0;
+		while(i < solar.planets.size()){
+			DrawPlanet(solar.planets.get(i),g);
+		}
 
 		for(Ship ship : players){
 			

@@ -18,9 +18,22 @@ public class SolarSystem {
 
     public SolarSystem(int planetnum){
         sun = new Planet(1000,Color.red,Color.orange,0,0);
+
+        float x;
+        float y;
+        int i = 0;
+        while(i < planetnum){
+            x = sun.GetX() + 2000;
+            y = 0;
+            planets.add(new Planet(1000,Color.blue,Color.green,x,y));
+        }
     }
 
     public Planet GetSun(){
         return sun;
+    }
+
+    public ArrayList<Planet> GetPlanets(){
+        return planets;
     }
 }

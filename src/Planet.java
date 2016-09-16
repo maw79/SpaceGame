@@ -18,6 +18,8 @@ public class Planet {
     float LocX = 0;
     float LocY = 0;
 
+    float Weight = 0;
+
     Circle cir;
 
     ArrayList<Circle> c = new ArrayList<Circle>();
